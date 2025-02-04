@@ -1,0 +1,118 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f2ef;
+    color: #1c1c1c;
+    margin: 0;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.form-container {
+    position: relative;
+    margin-top: 50px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 600px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border-top: 5px solid #0a66c2;
+    transition: all 0.3s ease;
+}
+
+
+.form-container h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0a66c2;
+    margin-bottom: 15px;
+}
+
+
+form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+input {
+    width: 60%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+input:focus {
+    border-color: #0a66c2;
+    box-shadow: 0 0 5px rgba(10, 102, 194, 0.3);
+}
+
+
+button {
+    background: #0a66c2;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+button:hover {
+    background: #004182;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.results-container {
+    margin-top: 50px;
+    width: 80%;
+    max-width: 800px;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #0a66c2;
+    transition: color 0.2s ease;
+}
+
+li a:hover {
+    text-decoration: underline;
+    color: #004182;
+}

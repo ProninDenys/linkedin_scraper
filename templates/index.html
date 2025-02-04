@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Finder - AI Job Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+ 
+    <header class="header">
+        <h1>🔎 Job Finder - AI Powered Job Search</h1>
+        <p>Find your dream job in seconds! Enter a job title and get the latest job postings from various sources.</p>
+        <p>🚀 Type a job title (e.g., "Python Developer") and discover job opportunities instantly.</p>
+    </header>
+
+ 
+    <div class="form-container">
+        <h2>Start Your Job Search</h2>
+        <form method="POST">
+            <input type="text" name="search" id="search-input" placeholder="Enter job title..." value="{{ search_query }}">
+            <button type="submit">Search</button>
+            <button type="button" id="clear-btn">Clear</button>
+        </form>
+    </div>
+
+
+    <div class="results-container">
+        {% if jobs %}
+            <h2>Results for "{{ search_query }}"</h2>
+            <ul>
+                {% for job in jobs %}
+                    <li>
+                        <a href="{{ job['Link'] }}" target="_blank">{{ job['Title'] }}</a> - {{ job['Company'] }} ({{ job['Location'] }})
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+
+   
+    <script>
+        document.getElementById("clear-btn").addEventListener("click", function() {
+            document.getElementById("search-input").value = "";
+        });
+    </script>
+
+</body>
+</html>
